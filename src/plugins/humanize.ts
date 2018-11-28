@@ -38,7 +38,7 @@ const plugin: DurationPlugin = {
     store.humanizeRelObj = durationToRelativeDuration(instance.obj);
   },
   methods: {
-    humanize: (instance: Duration, store: DurationPluginStore) => (locale: string, relative: boolean = true): string => {
+    humanize: (instance: Duration, store: DurationPluginStore) => (locale: string, relative: boolean): string => {
       if (!Duration.locales[locale]) {
         throw new Error(`Locale "${locale}" doesn't exist.`);
       }
