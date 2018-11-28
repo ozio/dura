@@ -1,6 +1,6 @@
 {
   "name": "dura",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Simple and easy extendable library to work with time durations",
   "main": "index.js",
   "scripts": {
