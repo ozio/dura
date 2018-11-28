@@ -1,0 +1,17 @@
+{
+  "name": "dura",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "rm -rf lib && tsc",
+    "build": "rm -rf lib && tsc && cp package.json ./lib/ && cd lib && npm publish && cd -"
+  },
+  "keywords": [
+    "duration",
+    "time",
+    "dura"
+  ],
+  "author": "Nikolay Solovyov <i@mr-ozio.ru>",
+  "license": "MIT"
+}
