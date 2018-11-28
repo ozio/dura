@@ -74,14 +74,9 @@ const plugin: DurationPlugin = {
           : formatAtom(obj.minutes, localeObj, 'mm')
         ;
       } else if (obj.seconds) {
-        string = obj.seconds === 1
+        string = obj.seconds === 1 || obj.seconds === 0
           ? formatAtom(obj.seconds, localeObj, 's')
           : formatAtom(obj.seconds, localeObj, 'ss')
-        ;
-      } else if (obj.milliseconds) {
-        string = obj.milliseconds === 1
-          ? formatAtom(obj.milliseconds, localeObj, 'S')
-          : formatAtom(obj.milliseconds, localeObj, 'SS')
         ;
       }
 
