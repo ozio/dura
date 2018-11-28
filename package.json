@@ -1,8 +1,8 @@
 {
   "name": "dura",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple and easy extendable library to work with time durations",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "rm -rf lib && tsc",
     "build-and-publish": "npm start && cp package.json ./lib/ && cd lib && npm publish && cd -"
