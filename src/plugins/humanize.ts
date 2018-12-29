@@ -38,12 +38,16 @@ const plugin: DurationPlugin = {
     store.humanizeRelObj = durationToRelativeDuration(instance.obj);
   },
   methods: {
-    humanize: (instance: Duration, store: DurationPluginStore) => (locale: string, relative: boolean): string => {
+    humanize: (instance: Duration, store: DurationPluginStore) => (
+      locale: string,
+      relative: boolean,
+      preset: 'tiny' | 'default' = 'default',
+    ): string => {
       if (!Duration.locales[locale]) {
         throw new Error(`Locale "${locale}" doesn't exist.`);
       }
 
-      const localeObj = Duration.locales[locale]['default'];
+      const localeObj = Duration.locales[locale][preset];
       const obj = store.humanizeRelObj;
 
       let string = '';
